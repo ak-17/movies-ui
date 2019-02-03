@@ -1,0 +1,36 @@
+<div class="container" *ngIf = "!loading">
+   
+   
+    <div class="container search">
+        <div class="row">
+            <div class="col-lg-6 input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Movie Title</span>
+                </div>
+                <input type="text" class="form-control" [(ngModel)]="searchText" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="col-lg-6 input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Movie Title</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        
+    </div>
+
+   
+
+
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 card-movie" *ngFor = "let movie of movies | stringFilter : searchText">
+          <app-movie-card [movie] = "movie"></app-movie-card>
+      </div>
+    </div>
+</div>
+<div class="container text-center load" *ngIf = "loading">
+    <span class="align-middle">
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    </span>
+</div>

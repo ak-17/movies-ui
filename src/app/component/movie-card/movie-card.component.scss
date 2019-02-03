@@ -1,0 +1,65 @@
+@import '../../../styles.scss';
+
+.card {
+    border:none;
+}
+
+.tint {
+  position: relative;
+  float: left;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  margin: 0px;
+}
+
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all .3s linear;
+}
+
+.tint:hover:before { background: none; }
+
+.card-img-top {
+    display: block;
+}
+
+.card-body {
+    background-color: $color-black;
+    // height: 280px;
+}
+
+.card-title {
+    color: $color-pink;
+}
+
+.card-text {
+    color: $color-lightgrey;
+}
+
+.badge {
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+
+.main-btn {
+    background-color: $color-pink;
+    margin-right:8px;
+    color: $color-white;
+}
+
+
+.outline {
+    background-color: none;
+    border: 2px solid $color-pink;
+    color: white;
+}
+
+.outline:hover {
+    background-color: $color-pink;
+}

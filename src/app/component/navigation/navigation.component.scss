@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+.navbar {
+    background-color: $color-black;
+}
+
+.navbar a {
+    color: $color-pink;
+}
+
+.navbar-toggler {
+    color: $color-pink;
+}
+
+.nav-item a {
+    color: $color-lightgrey;
+}

@@ -1,0 +1,18 @@
+<div class="container h-100" *ngIf = "movie">
+  <div class="card">
+    <figure class="tint">
+        <img class="card-img-top" src="{{movie.img_address}}" alt="Card image">
+    </figure>
+    
+    <div class="card-body">
+      <h4 class="card-title">{{movie.movie_title | stringLengthManage:19}}</h4>
+      <p class="card-text">{{movie.content_rating | emptyValueFilter}}</p>
+      <p class="card-text">{{movie.title_year | emptyValueFilter}}</p>
+      <div>
+        <span class="badge" *ngFor = "let genre of genres; index as i" [ngClass]="{'badge-primary': i==0,'badge-success': i==1, 'badge-danger': i==2, 'badge-light':i==3}" >{{genre | emptyValueFilter}}</span>
+      </div>
+      <a href={{movie.movie_imdb_link}} target="_blank" class="btn main-btn">Visit Link</a>
+      <a href="#" class="btn outline" >More Details</a>
+    </div>
+  </div>
+</div>

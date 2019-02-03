@@ -1,0 +1,27 @@
+@import '../../../styles.scss';
+
+.card-movie {
+    padding: 15px;
+}
+
+.load {
+    height: 908px;
+    color: $color-pink;
+}
+
+.search {
+    padding: 16px;
+}
+
+.input-group-text {
+    background-color: $color-pink;
+    border: none;
+    font-weight: bold;
+    color: $color-white;
+}
+
+.form-control {
+    background-color: $color-black;
+    border: none;
+    color: $color-white;
+}
