@@ -10,6 +10,8 @@ export class MovieCardComponent implements OnInit {
 
   genres = [];
 
+  isDisabled: boolean = false;
+
   @Input('movie') movie: Movie
 
   constructor(private movieService: MovieService) { }
@@ -18,8 +20,16 @@ export class MovieCardComponent implements OnInit {
     this.genres = this.movie.genres.split("|",4);
   }
 
-  moreDetail():void {
-    console.log(this.movie.img_address);
+  addToCart():void {
+    this.isDisabled = true;
+    this.movieService.addToCart(this.movie.id);
+    console.log(this.movie.movie_title + "added to cart")
   }
-  //src="../../../assets/movie-icon.png
+
+  removeFromCart():void {
+    this.isDisabled = false;
+    this.movieService.removeFromCart(this.movie.id);
+    console.log(this.movie.movie_title + "removed from cart")
+  }
+
 }

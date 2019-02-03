@@ -11,8 +11,9 @@
       <div>
         <span class="badge" *ngFor = "let genre of genres; index as i" [ngClass]="{'badge-primary': i==0,'badge-success': i==1, 'badge-danger': i==2, 'badge-light':i==3}" >{{genre | emptyValueFilter}}</span>
       </div>
-      <a href={{movie.movie_imdb_link}} target="_blank" class="btn main-btn">Visit Link</a>
-      <a href="#" class="btn outline" >More Details</a>
+      <button type="button" *ngIf = "isDisabled === false" class="btn main-btn" (click) = "addToCart()" >Add to Cart <i class="fa fa-shopping-cart"></i></button>
+      <button type="button" *ngIf = "isDisabled === true" class="btn main-btn" (click) = "removeFromCart()" >Remove from Cart <i class="fa fa-minus-circle"></i></button>
+      <a href={{movie.movie_imdb_link}} target="_blank" class="btn btn-outline-primary">Visit Link</a>
     </div>
   </div>
 </div>

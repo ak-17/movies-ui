@@ -54,12 +54,12 @@
 }
 
 
-.outline {
-    background-color: none;
+.btn-outline-primary {
     border: 2px solid $color-pink;
-    color: white;
+    text-decoration-color: none;
+    color: $color-white;
 }
 
-.outline:hover {
+.btn-outline-primary:hover {
     background-color: $color-pink;
 }
