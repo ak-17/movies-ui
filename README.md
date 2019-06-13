@@ -1,4 +1,15 @@
-# Movies
+# Movie Site UI
+
+![alt text](https://raw.githubusercontent.com/ak-17/movies-ui/master/src/assets/Screenshot.png)
+
+**Features of application**
+---
+
+  *Adding Movie to a cart for checkout
+  *Filtering on name
+  *Visiting IMDB page of the movie
+  *Genres's a movie belongs to
+  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
