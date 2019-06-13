@@ -10,7 +10,7 @@
   * Visiting IMDB page of the movie
   * Genres's a movie belongs to
   
-  **To Be Done**
+  **To Do**
   * Filtering on genre
   
 
