@@ -9,6 +9,7 @@ import { ListDisplayComponent } from './component/list-display/list-display.comp
 import { StringLengthManagePipe } from '../app/pipes/string-length-pipe/string-length-manage.pipe';
 import { EmptyValueFilterPipe } from '../app/pipes/empty-value-filter/empty-value-filter.pipe';
 import { StringFilterPipe } from './pipes/string-filter.pipe';
+import { DropDownMovieComponent } from './component/drop-down-movie/drop-down-movie.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { StringFilterPipe } from './pipes/string-filter.pipe';
     ListDisplayComponent,
     StringLengthManagePipe,
     EmptyValueFilterPipe,
-    StringFilterPipe
+    StringFilterPipe,
+    DropDownMovieComponent
   ],
   imports: [
     BrowserModule,

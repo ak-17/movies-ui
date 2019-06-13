@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../../movie';
 import { MovieService } from '../../movie.service';
 
 @Component({
@@ -12,14 +13,17 @@ export class NavigationComponent implements OnInit {
 
   itemsInCart: number = 0;
 
+  cartMovies: Movie[];
+  
   ngOnInit() {
-    this.getNoOfItemsInCart();
+    this.getMoviesInCart();
   }
 
-  getNoOfItemsInCart(): void {
-    this.movieService.inCartItems$.subscribe(
-      itemCount => {
-        this.itemsInCart = itemCount;
+  getMoviesInCart(): void {
+    this.movieService.inCartMoviesSource$.subscribe(
+      cartMovies => {
+        this.cartMovies = cartMovies;
+        console.log(this.cartMovies)
       }
     );
   }

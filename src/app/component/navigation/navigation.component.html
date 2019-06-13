@@ -8,8 +8,14 @@
       <li class="nav-item "> 
         <a class="nav-link" href="#">HOME</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CART <span class="badge badge-light">{{itemsInCart}}</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">CART 
+          <span class="badge badge-light" *ngIf = "cartMovies">{{cartMovies.length}}</span>
+          <span class="badge badge-light" *ngIf = "!cartMovies">0</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *ngIf = "cartMovies">
+          <app-drop-down-movie [cartMovies] = "cartMovies" ></app-drop-down-movie>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">CONTACT</a>
@@ -17,3 +23,5 @@
     </ul>
   </div>
 </nav>
+
+  

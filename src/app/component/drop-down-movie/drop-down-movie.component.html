@@ -1,0 +1,8 @@
+<div class="card" *ngIf = "cartMovies">
+  <div class="mb-2 listItem" *ngFor = "let movie of cartMovies">
+    <img class="card-img-top" src="{{movie.img_address}}" alt="Card image">
+    <div class="card-body">
+      <span class="card-title pl-2">{{movie.movie_title | stringLengthManage:25}}</span>
+    </div>
+  </div>
+</div>

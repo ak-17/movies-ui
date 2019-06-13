@@ -22,13 +22,13 @@ export class MovieCardComponent implements OnInit {
 
   addToCart():void {
     this.isDisabled = true;
-    this.movieService.addToCart(this.movie.id);
+    this.movieService.addToCart(this.movie);
     console.log(this.movie.movie_title + "added to cart")
   }
 
   removeFromCart():void {
     this.isDisabled = false;
-    this.movieService.removeFromCart(this.movie.id);
+    this.movieService.removeFromCart(this.movie);
     console.log(this.movie.movie_title + "removed from cart")
   }
 

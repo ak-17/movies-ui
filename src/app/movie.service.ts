@@ -15,30 +15,24 @@ export class MovieService {
 
   private movieJson = 'assets/id-movie-data.json';
   
-  private inCartItemsSource = new Subject<number>();
+  inCartmovies: Movie[] = [];
 
-  inCartItems$ = this.inCartItemsSource.asObservable(); // observable for inCartItems
-  
-  movieIds: number[] = [];
+  private inCartMoviesSource = new Subject<Movie[]>();
 
+  inCartMoviesSource$ = this.inCartMoviesSource.asObservable();
 
-
-  addToCart(id:number):void {
-    this.movieIds.push(id);
-    this.getNoOfCartItems(); // to update cart count
+  addToCart(movie:Movie):void {
+    this.inCartmovies.push(movie);
+    this.getCartMovies(); // to update cart count
   }
 
-  removeFromCart(id:number):void {
-    this.movieIds.splice(this.movieIds.indexOf(id),1);
-    this.getNoOfCartItems(); // to update cart count
+  removeFromCart(movie:Movie):void {
+    this.inCartmovies.splice(this.inCartmovies.indexOf(movie),1);
+    this.getCartMovies(); // to update cart count
   }
 
-  getCartItems():number[] {
-    return this.movieIds;
-  }
-
-  getNoOfCartItems():void {
-    this.inCartItemsSource.next(this.movieIds.length);
+  getCartMovies():void {
+    this.inCartMoviesSource.next(this.inCartmovies);
   }
 
   getMovies():Observable<Movie[]> {

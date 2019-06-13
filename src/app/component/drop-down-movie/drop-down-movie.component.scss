@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+
+.card {
+    border:none;
+    background-color: $color-pink;
+}
+
+.card-img-top {
+    display: inline-block;
+    width: 35px
+}
+
+.card-body {
+    display: inline-block;
+    font-size: 18px;
+    padding: 0px;
+    color: white;
+}
+
+.listItem {
+    background-color: black;
+}
