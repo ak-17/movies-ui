@@ -4,11 +4,13 @@
 
 **Features of application**
 ---
-
-  *Adding Movie to a cart for checkout
-  *Filtering on name
-  *Visiting IMDB page of the movie
-  *Genres's a movie belongs to
+  **Implemented**
+  * Adding Movie to a cart for checkout
+  * Filtering on name
+  * Visiting IMDB page of the movie
+  * Genres's a movie belongs to
+  **To Be Done**
+  * Filtering on genre
   
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
